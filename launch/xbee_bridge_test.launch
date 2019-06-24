@@ -1,0 +1,10 @@
+<launch>
+   <node ns="gcs" pkg="xbee_bridge" type="xbee_bridge.py" name="xbee_bridge" output="screen">
+   <param name="serial_port" value="/dev/ttyACM1" />
+   </node> 
+
+   <node ns="drone" pkg="xbee_bridge" type="xbee_bridge.py" name="xbee_bridge" output="screen">
+   <param name="serial_port" value="/dev/ttyACM0" />
+   </node> 
+
+</launch>
