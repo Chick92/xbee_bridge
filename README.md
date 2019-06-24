@@ -1,7 +1,3 @@
-# rfd900_bridge
+ROS bridge between two computers using either xbee or wired serial line. 
 
-ros package intended to allow a ROS bridge of various topics (just cmd vel at the moment) between two machines with independant ROS masters, for situations where either a multi master network is not possible, or some networking issue prevents other solutions using tcp/ip.
-
-This can be implemented with any serial based radio, or wired serial connection. 
-
-package is based on the rfd900_bridge package by wagnera - https://github.com/wagnera/rfd900_bridge
+Written to get round the parrot bebop autonomy driver shitting the bed when there's more than one ip address on the ROS master. Drone can now be flown with dedicated ground station, that will send telem and receive commands via this bridge package - minus the camera feed as not enough bandwidth.
